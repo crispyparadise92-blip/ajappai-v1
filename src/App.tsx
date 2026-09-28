@@ -23,8 +23,8 @@ const DAFTAR_PKBM: PKBM[] = [
         urlSiswa: "https://app-siswa-pkbm3.vercel.app/?from=pkbm",
     urlAdmin: "https://admin-pkbm-v1.vercel.app/",
     guru: [
-      { nama: "M. SAID", url: "https://pkbm-absensi-m-said.vercel.app/" },
-      { nama: "KASMAN", url: "https://pkbm-absensi-kasman.vercel.app/" },
+            { nama: "M. SAID", url: "https://pkbm-absensi-m-said.vercel.app/?from=guru" },
+      { nama: "KASMAN", url: "https://pkbm-absensi-kasman.vercel.app/?from=guru" },
     ],
   },
   { nama: "PKBM MAPPAKASUNGGU" },
