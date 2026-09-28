@@ -58,23 +58,35 @@ export default function App() {
 
   // Baru jalankan timer transisi setelah logo siap
   useEffect(() => {
-    if (!logoSiap) return;
+    if (!logoSiap || halaman !== "splash") return;
     const timerKeluar = setTimeout(() => setSplashKeluar(true), 1500);
     const timerPindah = setTimeout(() => setHalaman("home"), 2000);
     return () => {
       clearTimeout(timerKeluar);
       clearTimeout(timerPindah);
     };
-  }, [logoSiap]);
+  }, [logoSiap, halaman]);
 
   useEffect(() => {
     const handler = (event: MessageEvent) => {
       if (event.data?.type === "PKBM_KEMBALI") {
-        setLinkAktif(null); // tutup iframe, kembali ke halaman portal terakhir
+        setLinkAktif(null);
+        setPkbmDipilih(null);
+        setSplashKeluar(false);
+        setHalaman("splash");
       }
     };
     window.addEventListener("message", handler);
     return () => window.removeEventListener("message", handler);
+  }, []);
+
+  useEffect(() => {
+    window.history.pushState(null, "", window.location.href);
+    const kunciBack = () => {
+      window.history.pushState(null, "", window.location.href);
+    };
+    window.addEventListener("popstate", kunciBack);
+    return () => window.removeEventListener("popstate", kunciBack);
   }, []);
 
   const navigasi = (url: string) => {
