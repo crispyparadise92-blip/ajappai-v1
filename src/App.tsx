@@ -20,11 +20,12 @@ const DAFTAR_PKBM: PKBM[] = [
   { nama: "PKBM HARAPAN BUNDA" },
   {
     nama: "PKBM BUNGUNG SALAPANG",
-        urlSiswa: "https://app-siswa-pkbm3.vercel.app/?from=pkbm",
-    urlAdmin: "https://admin-pkbm-v1.vercel.app/",
+    urlSiswa: "https://app-siswa-pkbm-bungung-salapang.vercel.app/?from=pkbm",
+    urlAdmin: "https://admin-pkbm-bungung-salapang.vercel.app/",
     guru: [
-            { nama: "M. SAID", url: "https://pkbm-absensi-m-said.vercel.app/?from=guru" },
-      { nama: "KASMAN", url: "https://pkbm-absensi-kasman.vercel.app/?from=guru" },
+      { nama: "NURAENI", url: "https://nuraeni.vercel.app/?from=guru" },
+      { nama: "HENI INDRAYANI", url: "https://heni-indrayani.vercel.app/?from=guru" },
+      { nama: "SUKIRMAN R", url: "https://sukirman-r.vercel.app/?from=guru" },
     ],
   },
   { nama: "PKBM MAPPAKASUNGGU" },
