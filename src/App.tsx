@@ -24,7 +24,10 @@ const DAFTAR_PKBM: PKBM[] = [
     urlAdmin: "https://admin-pkbm-bungung-salapang.vercel.app/",
     guru: [
       { nama: "NURAENI", url: "https://nuraeni.vercel.app/?from=guru" },
-      { nama: "HENI INDRAYANI", url: "https://heni-indrayani.vercel.app/?from=guru" },
+      {
+        nama: "HENI INDRAYANI",
+        url: "https://heni-indrayani.vercel.app/?from=guru",
+      },
       { nama: "SUKIRMAN R", url: "https://sukirman-r.vercel.app/?from=guru" },
     ],
   },
@@ -75,6 +78,11 @@ export default function App() {
         setPkbmDipilih(null);
         setSplashKeluar(false);
         setHalaman("splash");
+      }
+      if (event.data?.type === "ATS_KEMBALI") {
+        setLinkAktif(null);
+        setPkbmDipilih(null);
+        setHalaman("home");
       }
     };
     window.addEventListener("message", handler);
@@ -134,12 +142,17 @@ export default function App() {
 
   if (linkAktif) {
     return (
-      <div style={{ width: "100%", height: "100vh" }}>
+      <div style={{ position: "fixed", inset: 0 }}>
         <iframe
           src={linkAktif}
           title="Aplikasi"
           allow="geolocation; camera; microphone"
-          style={{ width: "100%", height: "100%", border: "none" }}
+          style={{
+            display: "block",
+            width: "100%",
+            height: "100%",
+            border: "none",
+          }}
         />
       </div>
     );
