@@ -84,6 +84,10 @@ export default function App() {
         setPkbmDipilih(null);
         setHalaman("home");
       }
+      // Kembali ke halaman sebelum membuka app (PKBM yang dipilih tetap tersimpan)
+      if (event.data?.type === "SISWA_KEMBALI") {
+        setLinkAktif(null);
+      }
     };
     window.addEventListener("message", handler);
     return () => window.removeEventListener("message", handler);
