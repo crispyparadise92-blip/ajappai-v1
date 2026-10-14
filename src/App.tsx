@@ -51,7 +51,20 @@ const DAFTAR_PKBM: PKBM[] = [
       { nama: "ST. HARNITA JUPRI, S.Pd", url: "https://st-harnita.vercel.app/?from=guru" },
     ],
   },
-  { nama: "PKBM JULU ATIA" },
+  { nama: "PKBM JULU ATIA",
+    urlSiswa: "https://siswa-pkbmjuluatia.vercel.app/?from=pkbm",
+    urlAdmin: "https://admin-pkbmjuluatia.vercel.app/",
+    guru: [
+      {
+        nama: "ANNISA",
+        url: "https://annisa-vert.vercel.app/?from=guru",
+      },
+      {
+        nama: "NURFIANA AGUSTINA",
+        url: "https://nurfiana-agustina.vercel.app/?from=guru",
+      },
+      { nama: "ROSMIATI", url: "https://rosmiati.vercel.app/?from=guru" },
+    ], },
   { nama: "PKBM AR RAHMAN" },
   { nama: "PKBM BINABORI" },
   { nama: "PKBM BIRTARIA" },
