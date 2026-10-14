@@ -19,7 +19,7 @@ const DAFTAR_PKBM: PKBM[] = [
   { nama: "SKB JENEPONTO" },
   { nama: "PKBM HARAPAN BUNDA",
     urlSiswa: "https://siswa-pkbmharapanbunda.vercel.app/?from=pkbm",
-    urlAdmin: https://admin-pkbmharapanbunda.vercel.app/",
+    urlAdmin: "https://admin-pkbmharapanbunda.vercel.app/",
     guru: [
       { nama: "SITA", url: "https://sita-opal.vercel.app/?from=guru" },
       {
