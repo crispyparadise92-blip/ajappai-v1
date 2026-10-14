@@ -35,7 +35,22 @@ const DAFTAR_PKBM: PKBM[] = [
   { nama: "PKBM RESKI ABADI" },
   { nama: "PKBM BUKIT CEMARA" },
   { nama: "PKBM BAJI PAMAE" },
-  { nama: "PKBM ARHAM" },
+  {
+    nama: "PKBM ARHAM",
+    urlSiswa: "https://app-siswa-pkbmarham.vercel.app/?from=pkbm",
+    urlAdmin: "https://admin-pkbm-arham.vercel.app/",
+    guru: [
+      {
+        nama: "KASMA B, S.H",
+        url: "https://kasma-theta.vercel.app/?from=guru",
+      },
+      {
+        nama: "HJ. SYAMSIAH, S.Pd.I., Gr",
+        url: "https://syamsiah.vercel.app/?from=guru",
+      },
+      { nama: "ST. HARNITA JUPRI, S.Pd", url: "https://st-harnita.vercel.app/?from=guru" },
+    ],
+  },
   { nama: "PKBM JULU ATIA" },
   { nama: "PKBM AR RAHMAN" },
   { nama: "PKBM BINABORI" },
