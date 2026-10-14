@@ -17,7 +17,7 @@ type PKBM = {
 
 const DAFTAR_PKBM: PKBM[] = [
   { nama: "SKB JENEPONTO" },
-  { nama: "PKBM HARAPAN BUNDA,
+  { nama: "PKBM HARAPAN BUNDA",
     urlSiswa: "https://siswa-pkbmharapanbunda.vercel.app/?from=pkbm",
     urlAdmin: https://admin-pkbmharapanbunda.vercel.app/",
     guru: [
@@ -29,7 +29,8 @@ const DAFTAR_PKBM: PKBM[] = [
       { nama: "KASMIRAH", url: "https://kasmirah.vercel.app/?from=guru" },
       { nama: "MARIANA", url: "https://mariana-hazel.vercel.app/?from=guru" },
       { nama: "YEYEN", url: "https://yeyen-five.vercel.app/?from=guru" },
-    ]," },
+    ],
+  },
   {
     nama: "PKBM BUNGUNG SALAPANG",
     urlSiswa: "https://app-siswa-pkbm-bungung-salapang.vercel.app/?from=pkbm",
