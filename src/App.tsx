@@ -12,12 +12,14 @@ type PKBM = {
   nama: string;
   urlSiswa?: string;
   urlAdmin?: string;
+  urlKepala?: string; // link dashboard Kepala PKBM (dibuka di iframe)
   guru?: Guru[];
 };
 
 const DAFTAR_PKBM: PKBM[] = [
   { nama: "SKB JENEPONTO" },
-  { nama: "PKBM HARAPAN BUNDA",
+  {
+    nama: "PKBM HARAPAN BUNDA",
     urlSiswa: "https://siswa-pkbmharapanbunda.vercel.app/?from=pkbm",
     urlAdmin: "https://admin-pkbmharapanbunda.vercel.app/",
     guru: [
@@ -35,6 +37,7 @@ const DAFTAR_PKBM: PKBM[] = [
     nama: "PKBM BUNGUNG SALAPANG",
     urlSiswa: "https://app-siswa-pkbm-bungung-salapang.vercel.app/?from=pkbm",
     urlAdmin: "https://admin-pkbm-bungung-salapang.vercel.app/",
+    urlKepala: "https://kepala-pkbmtes.vercel.app/", // <- isi dengan link dashboard Kepala PKBM Bungung Salapang
     guru: [
       { nama: "NURAENI", url: "https://nuraeni.vercel.app/?from=guru" },
       {
@@ -61,10 +64,14 @@ const DAFTAR_PKBM: PKBM[] = [
         nama: "HJ. SYAMSIAH, S.Pd.I., Gr",
         url: "https://syamsiah.vercel.app/?from=guru",
       },
-      { nama: "ST. HARNITA JUPRI, S.Pd", url: "https://st-harnita.vercel.app/?from=guru" },
+      {
+        nama: "ST. HARNITA JUPRI, S.Pd",
+        url: "https://st-harnita.vercel.app/?from=guru",
+      },
     ],
   },
-  { nama: "PKBM JULU ATIA",
+  {
+    nama: "PKBM JULU ATIA",
     urlSiswa: "https://siswa-pkbmjuluatia.vercel.app/?from=pkbm",
     urlAdmin: "https://admin-pkbmjuluatia.vercel.app/",
     guru: [
@@ -77,21 +84,10 @@ const DAFTAR_PKBM: PKBM[] = [
         url: "https://nurfiana-agustina.vercel.app/?from=guru",
       },
       { nama: "ROSMIATI", url: "https://rosmiati.vercel.app/?from=guru" },
-    ], },
+    ],
+  },
   { nama: "PKBM AR RAHMAN" },
-  { nama: "PKBM BINABORI",
-    urlSiswa: "https://siswa-pkbmbinabori.vercel.app/?from=pkbm",
-    urlAdmin: "https://admin-pkbmbinabori.vercel.app/",
-    guru: [
-      {
-        nama: "MUSDALIFA SAPITRI",
-        url: "https://musdalifa-sapitri.vercel.app/?from=guru",
-      },
-      {
-        nama: "DANDI",
-        url: "https://dandi-seven-theta.vercel.app/?from=guru",
-      },
-    ], },
+  { nama: "PKBM BINABORI" },
   { nama: "PKBM BIRTARIA" },
   { nama: "PKBM AL MAIDAH" },
 ];
@@ -182,6 +178,14 @@ export default function App() {
       setLinkAktif(pkbmDipilih.urlAdmin);
     } else {
       alert("Link admin untuk PKBM ini belum tersedia.");
+    }
+  };
+
+  const bukaKepala = () => {
+    if (pkbmDipilih?.urlKepala) {
+      setLinkAktif(pkbmDipilih.urlKepala); // dibuka di iframe, link tidak tampil
+    } else {
+      alert("Dashboard Kepala PKBM untuk PKBM ini belum tersedia.");
     }
   };
 
@@ -330,6 +334,15 @@ export default function App() {
               <span className="menu-card-title">ADMIN</span>
               <span className="menu-card-desc">
                 Panel admin {pkbmDipilih.nama}
+              </span>
+              <span className="menu-arrow">→</span>
+            </button>
+
+            <button className="menu-card menu-card--hijau" onClick={bukaKepala}>
+              <span className="menu-icon">📈</span>
+              <span className="menu-card-title">KEPALA PKBM</span>
+              <span className="menu-card-desc">
+                Dashboard kinerja {pkbmDipilih.nama}
               </span>
               <span className="menu-arrow">→</span>
             </button>
@@ -570,6 +583,10 @@ const CSS = `
 
   .menu-card--ungu {
     background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  }
+
+  .menu-card--hijau {
+    background: linear-gradient(135deg, #059669, #047857);
   }
 
   .menu-icon {
