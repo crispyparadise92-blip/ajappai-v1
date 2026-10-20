@@ -87,7 +87,21 @@ const DAFTAR_PKBM: PKBM[] = [
     ],
   },
   { nama: "PKBM AR RAHMAN" },
-  { nama: "PKBM BINABORI" },
+  {
+    nama: "PKBM BINABORI",
+    urlSiswa: "https://siswa-pkbmbinabori.vercel.app/?from=pkbm",
+    urlAdmin: "https://admin-pkbmbinabori.vercel.app/",
+    guru: [
+      {
+        nama: "DANDI",
+        url: "https://dandi-seven-theta.vercel.app/?from=guru",
+      },
+      {
+        nama: "MUSDALIFA SAPITRI",
+        url: "https://musdalifa-sapitri.vercel.app/?from=guru",
+      },
+    ],
+  },
   { nama: "PKBM BIRTARIA" },
   { nama: "PKBM AL MAIDAH" },
 ];
