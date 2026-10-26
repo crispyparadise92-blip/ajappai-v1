@@ -75,6 +75,7 @@ const DAFTAR_PKBM: PKBM[] = [
     nama: "PKBM JULU ATIA",
     urlSiswa: "https://siswa-pkbmjuluatia.vercel.app/?from=pkbm",
     urlAdmin: "https://admin-pkbmjuluatia.vercel.app/",
+    urlKepala: "https://kepala-pkbmjuluatia.vercel.app/",
     guru: [
       {
         nama: "ANNISA",
